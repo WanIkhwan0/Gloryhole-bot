@@ -1,0 +1,10 @@
+module.exports = {
+  name: 'ready',
+  execute(client) {
+    console.log(`Bot aktif sebagai ${client.user.tag}`);
+    client.user.setPresence({
+      activities: [{ name: 'Mobile Legends', type: 0 }], // Type 0 untuk "Playing"
+      status: 'online',
+    });
+  }
+};
